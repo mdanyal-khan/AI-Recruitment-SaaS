@@ -1,0 +1,154 @@
+.ai-screening-card {
+  border: 1px solid var(--ai-border);
+  box-shadow: var(--shadow-ai);
+  background: linear-gradient(180deg, #ffffff 0%, #faf8ff 100%);
+  margin-top: 16px;
+}
+
+.ai-card-banner {
+  padding: 14px 20px;
+  background-color: var(--ai-50);
+  border-bottom: 1px solid var(--ai-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.ai-badge-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--ai-600);
+}
+
+.ai-sparkle-icon {
+  animation: ai-pulse 2s infinite ease-in-out;
+}
+
+.ai-human-review-note {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  background-color: var(--bg-surface);
+  padding: 3px 8px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-default);
+}
+
+.ai-card-body {
+  padding: 24px !important;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.ai-score-overview {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.ai-meta-block {
+  flex: 1;
+}
+
+.ai-classification-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.ai-score-number {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  color: var(--text-primary);
+  font-size: 1.125rem;
+}
+
+.ai-summary-text {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.ai-subscores-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  padding: 16px;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+}
+
+.ai-skills-breakdown {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.ai-skill-col {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ai-col-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+}
+
+.text-success {
+  color: var(--success-600);
+}
+.text-warning {
+  color: var(--warning-600);
+}
+
+.ai-skill-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.ai-pill {
+  padding: 4px 8px;
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.pill-strength {
+  background-color: var(--success-50);
+  color: var(--success-600);
+  border: 1px solid var(--success-border);
+}
+
+.pill-gap {
+  background-color: var(--warning-50);
+  color: var(--warning-600);
+  border: 1px solid var(--warning-border);
+}
+
+@keyframes ai-pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.15);
+    opacity: 0.8;
+  }
+}

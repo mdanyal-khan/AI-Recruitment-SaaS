@@ -1,0 +1,111 @@
+.btn-base {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  border-radius: var(--radius-md);
+  transition: background-color var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+  white-space: nowrap;
+  user-select: none;
+  gap: 8px;
+  outline: none;
+}
+
+.btn-base:focus-visible {
+  box-shadow: 0 0 0 2px var(--bg-surface), 0 0 0 4px var(--brand-500);
+}
+
+.btn-base:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Sizes */
+.btn-sm {
+  padding: 6px 12px;
+  font-size: 0.8125rem;
+  height: 32px;
+}
+
+.btn-md {
+  padding: 8px 16px;
+  font-size: 0.875rem;
+  height: 40px;
+}
+
+.btn-lg {
+  padding: 12px 24px;
+  font-size: 1rem;
+  height: 48px;
+  font-weight: 600;
+}
+
+/* Variants */
+.btn-primary {
+  background-color: var(--brand-600);
+  color: var(--text-inverse);
+  box-shadow: var(--shadow-xs);
+}
+.btn-primary:hover:not(:disabled) {
+  background-color: var(--brand-700);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-secondary {
+  background-color: var(--bg-surface);
+  color: var(--text-primary);
+  border: 1px solid var(--border-default);
+  box-shadow: var(--shadow-xs);
+}
+.btn-secondary:hover:not(:disabled) {
+  background-color: var(--bg-surface-subtle);
+  border-color: var(--border-strong);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--brand-600);
+  border: 1px solid var(--brand-200);
+}
+.btn-outline:hover:not(:disabled) {
+  background-color: var(--brand-50);
+  border-color: var(--brand-500);
+}
+
+.btn-ghost {
+  background-color: transparent;
+  color: var(--text-secondary);
+}
+.btn-ghost:hover:not(:disabled) {
+  background-color: var(--bg-surface-subtle);
+  color: var(--text-primary);
+}
+
+.btn-danger {
+  background-color: var(--danger-600);
+  color: var(--text-inverse);
+  box-shadow: var(--shadow-xs);
+}
+.btn-danger:hover:not(:disabled) {
+  background-color: var(--danger-500);
+}
+
+.btn-ai {
+  background: var(--ai-gradient);
+  color: var(--text-inverse);
+  box-shadow: 0 2px 8px rgba(124, 58, 237, 0.25);
+}
+.btn-ai:hover:not(:disabled) {
+  opacity: 0.95;
+  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.35);
+}
+
+/* Spinner */
+.btn-spinner {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
